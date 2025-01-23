@@ -42,4 +42,6 @@ vector_index <- c(1,3,4,6)
 vector_index[0]
 vector_index[1]
 
+LETTERS
 
+1:15
