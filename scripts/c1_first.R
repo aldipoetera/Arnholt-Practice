@@ -45,3 +45,7 @@ vector_index[1]
 LETTERS
 
 1:15
+
+numbers <- c(1, 2, 3)
+names(numbers) <- c('first', 'second', 'third')
+numbers
