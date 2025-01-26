@@ -34,3 +34,10 @@ M3['a',]
 is.matrix(M3['a',])
 M3['a',,drop=FALSE]
 is.matrix(M3['a',,drop=FALSE])
+
+A <- matrix(c(3, 2, 1, 2, -3, 1, 1, 1, 1), byrow = TRUE, nrow = 3)
+b <- matrix(c(10, -1, 6), byrow = TRUE, nrow = 3)
+A
+b
+x <- solve(A, b)
+A %*% x
