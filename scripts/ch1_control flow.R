@@ -1,4 +1,8 @@
-while(condition){
+if (conditions) {
+  statements
+} else if (conditions) {
+  statements
+} else {
   statements
 }
 
@@ -31,3 +35,23 @@ repeat{
   x = x + 1
 }
 print(paste(x, "is in the form of a^4"))
+
+N = 10
+if (N < 10) {
+  print("mid")
+} else if (N == 1) {
+  print("good")
+} else {
+  print("no")
+}
+
+set.seed(5)
+N <- 10^5 - 1
+rolls <- numeric(N)
+for (i in 1:N) {
+  rolls[i] <- mean(sample(x = 1:6, size = 2, replace = TRUE))
+}
+table(rolls)
+
+testarr <- array(1:24, dim = c(2, 3, 4))
+apply(X = testarr, MARGIN = c(1, 2), FUN = sum)

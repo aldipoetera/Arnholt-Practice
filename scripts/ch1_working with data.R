@@ -1,3 +1,4 @@
+library("PASWR2")
 data.EPIDURALF <- EPIDURALF
 
 attach(data.EPIDURALF)
@@ -50,3 +51,13 @@ DFsci <- data.frame(ID = c(2, 4, 3, 5, 1, 6),
 DFsci
 
 merge(DFphy, DFsci)
+
+NBMI <- with(data = data3.EPIDURALF, 
+             tapply(BMI, INDEX = list(ease, doctor), FUN = mean))
+NBMI
+CBMI <- with(data = data3.EPIDURALF, 
+             ifelse(tapply(BMI, INDEX = list(ease, doctor), FUN = mean) > 35,
+                    yes = "Obese",
+                    no = "Non-Obese"))
+CBMI
+             
