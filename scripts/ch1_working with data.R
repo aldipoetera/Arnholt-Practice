@@ -60,4 +60,10 @@ CBMI <- with(data = data3.EPIDURALF,
                     yes = "Obese",
                     no = "Non-Obese"))
 CBMI
-             
+
+for (i in 1:10) {
+  print(paste('BMI of',data3.EPIDURALF$BMI[i],
+              'with doctor', data3.EPIDURALF$doctor[i]))
+}
+tapply(data3.EPIDURALF$BMI, data3.EPIDURALF$doctor, FUN = function(x){mean(x,na.rm = TRUE)})
+ave(data3.EPIDURALF$BMI, data3.EPIDURALF$doctor, FUN = function(x){mean(x,na.rm = TRUE)})

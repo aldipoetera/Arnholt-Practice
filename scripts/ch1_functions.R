@@ -16,3 +16,4 @@ args(sample)
 sample(size = 20, replace = TRUE, x = 10)
 sample(10, 20, TRUE)
 sample(10, TRUE, size = 20)
+
